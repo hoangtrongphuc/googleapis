@@ -145,21 +145,7 @@
     "type": "git"
   },
   "scripts": {
-    "build-tools": "tsc -p tsconfig.tools.json",
-    "check": "gts check && npm run check-samples",
-    "check-samples": "semistandard \"samples/**/*.js\"",
-    "clean": "gts clean",
-    "compile": "tsc -p .",
-    "cover": "nyc --cache mocha build/test/ --recursive -t 10000 -S -R spec --require intelli-espower-loader && nyc report --reporter=html",
-    "doc": "jsdoc -c jsdoc-conf.json",
-    "fix": "gts fix && npm run fix-samples",
-    "fix-samples": "semistandard --fix \"samples/**/*.js\"",
-    "generate-apis": "npm run build-tools && node build/src/scripts/generate.js && clang-format -i -style='{Language: JavaScript, BasedOnStyle: Google, ColumnLimit: 80}' src/apis/**/*.ts",
-    "license-check": "jsgl --local .",
-    "posttest": "npm run check && npm run license-check",
-    "prepare": "npm run compile",
-    "pretest": "npm run compile",
-    "test": "npm run cover"
+    
   },
   "semistandard": {
     "ignore": [
